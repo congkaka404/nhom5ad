@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5"
+    android:padding="16dp">
+
+    <!-- Tiêu đề fragment "DASHBOARD" -->
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DASHBOARD"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:padding="16dp"
+        android:background="#FFC107" />
+
+    <!-- Tổng chi tiêu tháng -->
+    <TextView
+        android:id="@+id/tv_total_month"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tổng chi tiêu tháng này: 0K"
+        android:textSize="18sp"
+        android:padding="16dp"
+        android:background="#FFC107"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>
