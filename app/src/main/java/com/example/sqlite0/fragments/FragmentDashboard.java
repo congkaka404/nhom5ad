@@ -18,7 +18,7 @@ import java.util.Locale;
 
 public class FragmentDashboard extends Fragment {
 
-    private TextView tvTotalMonth;
+    private TextView
     private ItemViewModel itemViewModel;
     private PreferenceUtils preferenceUtils;
 
