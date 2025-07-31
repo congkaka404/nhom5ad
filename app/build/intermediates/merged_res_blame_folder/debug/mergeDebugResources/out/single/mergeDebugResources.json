@@ -1,0 +1,154 @@
+[
+    {
+        "merged": "com.example.sqlite0.app-debug-32:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.sqlite0.app-main-34:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.sqlite0.app-debug-32:/layout_activity_register.xml.flat",
+        "source": "com.example.sqlite0.app-main-34:/layout/activity_register.xml"
+    },
+    {
+        "merged": "com.example.sqlite0.app-debug-32:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.sqlite0.app-main-34:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.sqlite0.app-debug-32:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.sqlite0.app-main-34:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.sqlite0.app-debug-32:/drawable_ic_history.xml.flat",
+        "source": "com.example.sqlite0.app-main-34:/drawable/ic_history.xml"
+    },
+    {
+        "merged": "com.example.sqlite0.app-debug-32:/xml_backup_rules.xml.flat",
+        "source": "com.example.sqlite0.app-main-34:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.sqlite0.app-debug-32:/drawable_ic_today.xml.flat",
+        "source": "com.example.sqlite0.app-main-34:/drawable/ic_today.xml"
+    },
+    {
+        "merged": "com.example.sqlite0.app-debug-32:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.sqlite0.app-main-34:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.sqlite0.app-debug-32:/color_nav_item_color.xml.flat",
+        "source": "com.example.sqlite0.app-main-34:/color/nav_item_color.xml"
+    },
+    {
+        "merged": "com.example.sqlite0.app-debug-32:/layout_activity_login.xml.flat",
+        "source": "com.example.sqlite0.app-main-34:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.example.sqlite0.app-debug-32:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.sqlite0.app-main-34:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.sqlite0.app-debug-32:/layout_activity_edit_item.xml.flat",
+        "source": "com.example.sqlite0.app-main-34:/layout/activity_edit_item.xml"
+    },
+    {
+        "merged": "com.example.sqlite0.app-debug-32:/layout_fragment_dashboard.xml.flat",
+        "source": "com.example.sqlite0.app-main-34:/layout/fragment_dashboard.xml"
+    },
+    {
+        "merged": "com.example.sqlite0.app-debug-32:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.sqlite0.app-main-34:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.sqlite0.app-debug-32:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.sqlite0.app-main-34:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.sqlite0.app-debug-32:/layout_activity_main.xml.flat",
+        "source": "com.example.sqlite0.app-main-34:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.sqlite0.app-debug-32:/layout_fragment_statistic.xml.flat",
+        "source": "com.example.sqlite0.app-main-34:/layout/fragment_statistic.xml"
+    },
+    {
+        "merged": "com.example.sqlite0.app-debug-32:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.sqlite0.app-main-34:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.sqlite0.app-debug-32:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.sqlite0.app-main-34:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.sqlite0.app-debug-32:/layout_activity_splash.xml.flat",
+        "source": "com.example.sqlite0.app-main-34:/layout/activity_splash.xml"
+    },
+    {
+        "merged": "com.example.sqlite0.app-debug-32:/drawable_button.xml.flat",
+        "source": "com.example.sqlite0.app-main-34:/drawable/button.xml"
+    },
+    {
+        "merged": "com.example.sqlite0.app-debug-32:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.sqlite0.app-main-34:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.sqlite0.app-debug-32:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.sqlite0.app-main-34:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.sqlite0.app-debug-32:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.sqlite0.app-main-34:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.sqlite0.app-debug-32:/layout_fragment_today.xml.flat",
+        "source": "com.example.sqlite0.app-main-34:/layout/fragment_today.xml"
+    },
+    {
+        "merged": "com.example.sqlite0.app-debug-32:/drawable_ic_menu_user.xml.flat",
+        "source": "com.example.sqlite0.app-main-34:/drawable/ic_menu_user.xml"
+    },
+    {
+        "merged": "com.example.sqlite0.app-debug-32:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.sqlite0.app-main-34:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.sqlite0.app-debug-32:/menu_navigation.xml.flat",
+        "source": "com.example.sqlite0.app-main-34:/menu/navigation.xml"
+    },
+    {
+        "merged": "com.example.sqlite0.app-debug-32:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.sqlite0.app-main-34:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.sqlite0.app-debug-32:/layout_fragment_history.xml.flat",
+        "source": "com.example.sqlite0.app-main-34:/layout/fragment_history.xml"
+    },
+    {
+        "merged": "com.example.sqlite0.app-debug-32:/layout_activity_add_item.xml.flat",
+        "source": "com.example.sqlite0.app-main-34:/layout/activity_add_item.xml"
+    },
+    {
+        "merged": "com.example.sqlite0.app-debug-32:/drawable_ic_statistic.xml.flat",
+        "source": "com.example.sqlite0.app-main-34:/drawable/ic_statistic.xml"
+    },
+    {
+        "merged": "com.example.sqlite0.app-debug-32:/drawable_ic_remove.xml.flat",
+        "source": "com.example.sqlite0.app-main-34:/drawable/ic_remove.xml"
+    },
+    {
+        "merged": "com.example.sqlite0.app-debug-32:/layout_fragment_profile.xml.flat",
+        "source": "com.example.sqlite0.app-main-34:/layout/fragment_profile.xml"
+    },
+    {
+        "merged": "com.example.sqlite0.app-debug-32:/layout_item_spinner.xml.flat",
+        "source": "com.example.sqlite0.app-main-34:/layout/item_spinner.xml"
+    },
+    {
+        "merged": "com.example.sqlite0.app-debug-32:/layout_item_expense.xml.flat",
+        "source": "com.example.sqlite0.app-main-34:/layout/item_expense.xml"
+    },
+    {
+        "merged": "com.example.sqlite0.app-debug-32:/drawable_ic_add.xml.flat",
+        "source": "com.example.sqlite0.app-main-34:/drawable/ic_add.xml"
+    },
+    {
+        "merged": "com.example.sqlite0.app-debug-32:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.sqlite0.app-main-34:/mipmap-hdpi/ic_launcher_round.webp"
+    }
+]

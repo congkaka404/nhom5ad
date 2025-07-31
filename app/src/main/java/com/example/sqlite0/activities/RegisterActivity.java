@@ -15,7 +15,7 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText etUsername, etPassword, etEmail;
     private Button btnRegister;
     private UserRepository userRepository;
-
+//1
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
