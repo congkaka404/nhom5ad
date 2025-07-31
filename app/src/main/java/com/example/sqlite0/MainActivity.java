@@ -22,7 +22,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MainActivity extends AppCompatActivity {
-    private BottomNavigationView
+    private BottomNavigationView bottomNavigationView;
     private ViewPager viewPager;
     private FloatingActionButton floatingActionButton;
     private PreferenceUtils preferenceUtils;
