@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#F5F5F5"
+    android:background="@color/yellowlight"
     android:padding="16dp">
 
     <!-- Tiêu đề fragment "DASHBOARD" -->
@@ -15,7 +15,7 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:padding="16dp"
-        android:background="#FFC107" />
+        android:background="@color/grey" />
 
     <!-- Tổng chi tiêu tháng -->
     <TextView
@@ -25,7 +25,7 @@
         android:text="Tổng chi tiêu tháng này: 0K"
         android:textSize="18sp"
         android:padding="16dp"
-        android:background="#FFC107"
+        android:background="@color/grey"
         android:layout_marginTop="16dp" />
 
 </LinearLayout>
