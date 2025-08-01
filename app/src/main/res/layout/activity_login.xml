@@ -3,16 +3,16 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F5F5"
+    android:background="#ECEFF1"
     android:padding="16dp">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        card_view:cardCornerRadius="16dp"
-        card_view:cardElevation="8dp"
-        card_view:cardBackgroundColor="#FAFAFA">
+        card_view:cardCornerRadius="20dp"
+        card_view:cardElevation="10dp"
+        card_view:cardBackgroundColor="#FFFFFF"> <!-- Nền trắng hiện đại -->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -25,31 +25,36 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Đăng Nhập"
-                android:textColor="@android:color/black"
+                android:textColor="#333333"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="16dp"
-                android:background="@color/yellow"
-                android:padding="12dp" />
+                android:background="#FFF59D"
+                android:padding="12dp"
+                android:backgroundTintMode="src_in" />
 
             <EditText
                 android:id="@+id/et_username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:background="@android:color/white"
+                android:background="@drawable/edittext_highlight"
                 android:hint="Tên đăng nhập"
-                android:padding="12dp" />
+                android:padding="12dp"
+                android:textColor="#000000"
+                android:textColorHint="#888888" />
 
             <EditText
                 android:id="@+id/et_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:background="@android:color/white"
+                android:background="@drawable/edittext_highlight"
                 android:hint="Mật khẩu"
                 android:inputType="textPassword"
-                android:padding="12dp" />
+                android:padding="12dp"
+                android:textColor="#000000"
+                android:textColorHint="#888888" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -63,21 +68,20 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
-                    android:backgroundTint="@color/yellow"
+                    android:backgroundTint="#FFF59D"
                     android:padding="12dp"
                     android:text="Đăng Nhập"
-                    android:textColor="@android:color/black" />
+                    android:textColor="#000000" />
 
                 <Button
                     android:id="@+id/btn_register"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/yellow"
+                    android:backgroundTint="#FFF59D"
                     android:padding="12dp"
                     android:text="Đăng Ký"
-                    android:textColor="@android:color/black" />
+                    android:textColor="#000000" />
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-
 </RelativeLayout>
