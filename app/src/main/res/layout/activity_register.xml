@@ -81,7 +81,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Sign Up"
+                    android:text="SignUp"
                     android:backgroundTint="#379683"
                     android:textColor="#FFFFFF"
                     android:layout_marginEnd="8dp"
