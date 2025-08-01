@@ -29,15 +29,16 @@ public class AddItemActivity extends AppCompatActivity {
         EditText etTitle = findViewById(R.id.et_title);
         EditText etPrice = findViewById(R.id.et_price);
         EditText etDate = findViewById(R.id.et_date);
-        Button btnAdd = findViewById(R.id.btn_add);
-        Button btnCancel = findViewById(R.id.btn_cancel);
+        Button btnAdd = findViewById(R.id.btn_update);  // Still mapped to update ID (you may want to rename it in XML)
+        Button btnCancel = findViewById(R.id.btn_remove);
+        Button btnBack = findViewById(R.id.btn_back);
 
         ItemRepository itemRepository = new ItemRepository(this);
         PreferenceUtils preferenceUtils = new PreferenceUtils(this);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
                 this,
-                R.array.categories,
+                R.array.categories,  // Ensure this is also translated in strings.xml
                 android.R.layout.simple_spinner_item
         );
         adapter.setDropDownViewResource(R.layout.item_spinner);
@@ -65,7 +66,7 @@ public class AddItemActivity extends AppCompatActivity {
         btnAdd.setOnClickListener(v -> {
             int userId = preferenceUtils.getUserId();
             if (userId == -1) {
-                Toast.makeText(this, "Vui lòng đăng nhập", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Please log in", Toast.LENGTH_SHORT).show();
                 return;
             }
 
@@ -74,31 +75,30 @@ public class AddItemActivity extends AppCompatActivity {
             String priceStr = etPrice.getText().toString().trim();
             String date = etDate.getText().toString().trim();
 
-            // Kiểm tra các trường có rỗng không
             if (ValidationUtils.isEmpty(title, priceStr, date)) {
-                Toast.makeText(this, "Vui lòng điền đầy đủ thông tin", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
                 return;
             }
 
-            // Kiểm tra định dạng ngày
             if (!ValidationUtils.isValidDate(date)) {
-                Toast.makeText(this, "Ngày không hợp lệ, vui lòng chọn lại (dd/MM/yyyy)", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Invalid date. Please use format (dd/MM/yyyy)", Toast.LENGTH_SHORT).show();
                 return;
             }
 
-            // Kiểm tra giá trị giá
             if (!ValidationUtils.isValidPrice(priceStr, 0)) {
-                Toast.makeText(this, "Giá phải lớn hơn 0 và là số hợp lệ", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Price must be a valid number greater than 0", Toast.LENGTH_SHORT).show();
                 return;
             }
 
             String price = priceStr + "K";
             Item item = new Item(userId, title, category, price, date);
             itemRepository.addItem(item, userId);
-            Toast.makeText(this, "Đã thêm mục chi tiêu", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Expense item added successfully", Toast.LENGTH_SHORT).show();
             finish();
         });
 
         btnCancel.setOnClickListener(v -> finish());
+
+        btnBack.setOnClickListener(v -> finish());
     }
 }
