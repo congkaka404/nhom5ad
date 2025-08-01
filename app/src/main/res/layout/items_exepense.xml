@@ -15,31 +15,44 @@
         android:orientation="vertical"
         android:padding="16dp">
 
+        <!-- Tiêu đề -->
         <TextView
-            android:id="@+id/tv_expense_name"
-            android:layout_width="wrap_content"
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Food"
+            android:text="Title"
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="#333333" />
 
+        <!-- Danh mục -->
         <TextView
-            android:id="@+id/tv_expense_amount"
-            android:layout_width="wrap_content"
+            android:id="@+id/tv_category"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="150.000 đ"
-            android:textSize="16sp"
-            android:textColor="#379683"
+            android:text="Category"
+            android:textSize="14sp"
+            android:textColor="#666666"
             android:layout_marginTop="4dp" />
 
+        <!-- Giá -->
         <TextView
-            android:id="@+id/tv_expense_date"
-            android:layout_width="wrap_content"
+            android:id="@+id/tv_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="150,000 VND"
+            android:textSize="16sp"
+            android:textColor="#379683"
+            android:layout_marginTop="6dp" />
+
+        <!-- Ngày -->
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="01/08/2025"
             android:textSize="14sp"
-            android:textColor="#777777"
+            android:textColor="#999999"
             android:layout_marginTop="2dp" />
 
     </LinearLayout>
