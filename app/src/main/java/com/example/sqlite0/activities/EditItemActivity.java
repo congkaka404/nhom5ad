@@ -93,7 +93,7 @@ public class EditItemActivity extends AppCompatActivity {
         btnUpdate.setOnClickListener(v -> {
             int userId = preferenceUtils.getUserId();
             if (userId == -1) {
-                Toast.makeText(this, "Vui lòng đăng nhập", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Please login", Toast.LENGTH_SHORT).show();
                 return;
             }
 
@@ -103,24 +103,24 @@ public class EditItemActivity extends AppCompatActivity {
             String newDate = etDate.getText().toString().trim();
 
             if (ValidationUtils.isEmpty(newTitle, newPriceStr, newDate)) {
-                Toast.makeText(this, "Vui lòng điền đầy đủ thông tin", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Please fill in all information", Toast.LENGTH_SHORT).show();
                 return;
             }
 
             if (!ValidationUtils.isValidDate(newDate)) {
-                Toast.makeText(this, "Ngày không hợp lệ, vui lòng chọn lại (dd/MM/yyyy)", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Invalid date, please select again (dd/MM/yyyy)", Toast.LENGTH_SHORT).show();
                 return;
             }
 
             if (!ValidationUtils.isValidPrice(newPriceStr, 0)) {
-                Toast.makeText(this, "Giá phải lớn hơn 0 và là số hợp lệ", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Price must be greater than 0 and a valid number", Toast.LENGTH_SHORT).show();
                 return;
             }
 
             String newPrice = newPriceStr + "K";
             Item updatedItem = new Item(itemId, userId, newTitle, newCategory, newPrice, newDate);
             itemRepository.updateItem(updatedItem);
-            Toast.makeText(this, "Đã cập nhật mục chi tiêu", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Updated spending item", Toast.LENGTH_SHORT).show();
             finish();
         });
 
