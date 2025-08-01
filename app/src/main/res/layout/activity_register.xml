@@ -39,10 +39,9 @@
                 android:id="@+id/et_username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:hint="Username"
-                android:background="@drawable/edittext_bg"
-                android:padding="12dp"
-                android:layout_marginTop="8dp"/>
+                android:padding="12dp" />
 
             <EditText
                 android:id="@+id/et_password"
@@ -50,7 +49,6 @@
                 android:layout_height="wrap_content"
                 android:hint="Password"
                 android:inputType="textPassword"
-                android:background="@drawable/edittext_bg"
                 android:padding="12dp"
                 android:layout_marginTop="8dp"/>
 
@@ -60,7 +58,6 @@
                 android:layout_height="wrap_content"
                 android:hint="Email"
                 android:inputType="textEmailAddress"
-                android:background="@drawable/edittext_bg"
                 android:padding="12dp"
                 android:layout_marginTop="8dp"/>
 

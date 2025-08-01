@@ -13,7 +13,7 @@ import com.example.sqlite0.models.User;
 public class RegisterActivity extends AppCompatActivity {
 
     private EditText etUsername, etPassword, etEmail;
-    private Button btnRegister;
+    private Button btnRegister, btnLogin;
     private UserRepository userRepository;
 //1
     @Override
@@ -25,6 +25,7 @@ public class RegisterActivity extends AppCompatActivity {
         etPassword = findViewById(R.id.et_password);
         etEmail = findViewById(R.id.et_email);
         btnRegister = findViewById(R.id.btn_register);
+        btnLogin = findViewById(R.id.btn_login);
 
         userRepository = new UserRepository(this);
 
@@ -34,18 +35,18 @@ public class RegisterActivity extends AppCompatActivity {
             String email = etEmail.getText().toString().trim();
 
             if (username.isEmpty() || password.isEmpty() || email.isEmpty()) {
-                Toast.makeText(RegisterActivity.this, "Vui lòng nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
+                Toast.makeText(RegisterActivity.this, "Please enter complete information", Toast.LENGTH_SHORT).show();
                 return;
             }
 
             if (!email.contains("@") || !email.contains(".")) {
-                Toast.makeText(RegisterActivity.this, "Email không hợp lệ", Toast.LENGTH_SHORT).show();
+                Toast.makeText(RegisterActivity.this, "Email don't exist", Toast.LENGTH_SHORT).show();
                 return;
             }
 
             // Kiểm tra xem username đã tồn tại chưa
             if (userRepository.isUsernameExists(username)) {
-                Toast.makeText(RegisterActivity.this, "Tên đăng nhập đã tồn tại", Toast.LENGTH_SHORT).show();
+                Toast.makeText(RegisterActivity.this, "Username don't exist", Toast.LENGTH_SHORT).show();
                 return;
             }
 
@@ -54,11 +55,15 @@ public class RegisterActivity extends AppCompatActivity {
             // Gọi phương thức register
             long result = userRepository.register(user);
             if (result > 0) {
-                Toast.makeText(RegisterActivity.this, "Đăng ký thành công", Toast.LENGTH_SHORT).show();
+                Toast.makeText(RegisterActivity.this, "Register success", Toast.LENGTH_SHORT).show();
                 finish();
             } else {
-                Toast.makeText(RegisterActivity.this, "Đăng ký thất bại", Toast.LENGTH_SHORT).show();
+                Toast.makeText(RegisterActivity.this, "Register failed", Toast.LENGTH_SHORT).show();
             }
         });
+        btnLogin.setOnClickListener(v -> {
+            finish();
+        });
+
     }
 }
