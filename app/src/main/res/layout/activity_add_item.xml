@@ -82,7 +82,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
                 android:backgroundTint="#A8D5BA"
-                android:text="Back"
+                android:text="Add"
                 android:textColor="#ffffff" />
 
             <Button
