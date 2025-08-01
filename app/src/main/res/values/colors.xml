@@ -5,7 +5,13 @@
     <color name="yellow">#FFC107</color>
     <color name="grey">#7E99A3</color>
     <color name="yellowlight">#ECEFF1</color>
-    <color name="primary">#3F51B5</color>
+    <color name="primary">#4D63D5</color>
     <color name="background">#F5F5F5</color>
     <color name="dark_grey">#616161</color>
+    <color name="light_grey">#9E9E9E</color>
+    <color name="bee">#EDF5E1</color>
+    <color name="light_green">#8EE4AF</color>
+    <color name="green">#3AAFA9</color>
+    <color name="dark_green">#379683</color>
+    <color name="Light_blue">#2E9CCA</color>
 </resources>
