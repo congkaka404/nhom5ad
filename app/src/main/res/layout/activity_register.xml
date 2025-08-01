@@ -75,7 +75,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Sign up"
-                    android:backgroundTint="@color/yellow"
+                    android:backgroundTint="@color/light_green"
                     android:textColor="@android:color/black"
                     android:layout_marginEnd="8dp"/>
 
@@ -85,7 +85,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Sign in"
-                    android:backgroundTint="@color/yellow"
+                    android:backgroundTint="@color/light_green"
                     android:textColor="@android:color/black"
                     android:layout_marginStart="8dp"/>
             </LinearLayout>
