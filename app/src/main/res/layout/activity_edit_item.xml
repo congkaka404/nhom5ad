@@ -1,101 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#F5F5F5"
+    android:background="@color/background"
     android:padding="16dp">
 
-    <!-- Tiêu đề -->
-    <TextView
+    <!-- SearchView -->
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sửa/Xóa"
-        android:gravity="center"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:background="#FFC107"
-        android:padding="16dp"
-        android:textColor="@android:color/black" />
+        android:layout_marginBottom="12dp"
+        android:background="@color/white"
+        android:iconifiedByDefault="false"
+        android:elevation="2dp"
+        android:padding="8dp" />
 
-    <!-- EditText để nhập tiêu đề -->
-    <EditText
-        android:id="@+id/et_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="enter title"
-        android:padding="12dp"
-        android:background="@android:color/white"
-        android:layout_marginTop="16dp" />
-
-    <!-- Spinner để chọn danh mục -->
-    <Spinner
-        android:id="@+id/spinner_category"
-        android:entries="@array/categories"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:padding="12dp" />
-
-    <!-- EditText để nhập giá -->
-    <EditText
-        android:id="@+id/et_price"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="enter price"
-        android:padding="12dp"
-        android:inputType="numberDecimal"
-        android:background="@android:color/white"
-        android:layout_marginTop="16dp" />
-
-    <!-- EditText để chọn ngày -->
-    <EditText
-        android:id="@+id/et_date"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="select date"
-        android:padding="12dp"
-        android:background="@android:color/white"
-        android:layout_marginTop="16dp"
-        android:focusable="false"
-        android:focusableInTouchMode="false" />
-
-    <!-- Các nút -->
+    <!-- Thời gian từ - đến -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="16dp"
-        android:gravity="center">
+        android:layout_marginBottom="12dp"
+        android:weightSum="2">
 
-        <Button
-            android:id="@+id/btn_update"
-            android:layout_width="wrap_content"
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="UPDATE"
-            android:backgroundTint="#FFC107"
-            android:textColor="@android:color/black"
-            android:padding="12dp"
-            android:layout_marginEnd="8dp" />
+            android:layout_weight="1"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            android:layout_marginEnd="8dp"
+            app:cardBackgroundColor="@color/bee">
 
-        <Button
-            android:id="@+id/btn_remove"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="REMOVE"
-            android:backgroundTint="#FFC107"
-            android:textColor="@android:color/black"
-            android:padding="12dp"
-            android:layout_marginEnd="8dp" />
+            <EditText
+                android:id="@+id/et_input_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Start time"
+                android:padding="12dp"
+                android:background="@android:color/transparent"
+                android:textColor="@color/dark_grey"
+                android:focusable="false"
+                android:focusableInTouchMode="false" />
+        </androidx.cardview.widget.CardView>
 
-        <Button
-            android:id="@+id/btn_back"
-            android:layout_width="wrap_content"
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="BACK"
-            android:backgroundTint="#FFC107"
-            android:textColor="@android:color/black"
-            android:padding="12dp" />
+            android:layout_weight="1"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            android:layout_marginStart="8dp"
+            app:cardBackgroundColor="@color/bee">
+
+            <EditText
+                android:id="@+id/et_input_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Finish time"
+                android:padding="12dp"
+                android:background="@android:color/transparent"
+                android:textColor="@color/dark_grey"
+                android:focusable="false"
+                android:focusableInTouchMode="false" />
+        </androidx.cardview.widget.CardView>
     </LinearLayout>
 
+    <!-- Spinner + Search button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="12dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@color/bee">
+
+            <Spinner
+                android:id="@+id/spinner_categories_with_all"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:paddingVertical="12dp"
+                android:paddingHorizontal="8dp"
+                android:background="@android:color/transparent"
+                android:popupBackground="@color/white"
+                android:theme="@style/ThemeOverlay.AppCompat.Light" />
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/dark_green"
+            android:layout_marginStart="12dp"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="10dp"
+            android:background="@drawable/bg_button_rounded" />
+    </LinearLayout>
+
+    <!-- Tổng tiền -->
+    <TextView
+        android:id="@+id/tv_total_expense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total spending: "
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="@color/dark_green"
+        android:layout_marginBottom="12dp"
+        android:elevation="2dp" />
+
+    <!-- RecyclerView danh sách -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_expenses"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:clipToPadding="false"
+        android:padding="8dp"
+        android:elevation="2dp" />
 </LinearLayout>
