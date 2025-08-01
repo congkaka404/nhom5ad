@@ -22,7 +22,7 @@
         android:id="@+id/tv_total_month"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tổng chi tiêu tháng này: 0K"
+        android:text="Total spending this month: 0K"
         android:textSize="18sp"
         android:padding="16dp"
         android:background="@color/grey"
