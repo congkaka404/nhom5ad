@@ -125,9 +125,9 @@ public class EditItemActivity extends AppCompatActivity {
         });
 
         btnRemove.setOnClickListener(v -> new AlertDialog.Builder(this)
-                .setTitle("Xác nhận xóa")
-                .setMessage("Bạn có chắc chắn muốn xóa mục chi tiêu này không?")
-                .setPositiveButton("Có", (dialog, which) -> {
+                .setTitle("Confirm deletion")
+                .setMessage("Are you sure you want to delete this expense item?")
+                .setPositiveButton("Yes", (dialog, which) -> {
                     itemRepository.deleteItem(itemId);
                     Toast.makeText(this, "Đã xóa mục chi tiêu", Toast.LENGTH_SHORT).show();
                     finish();
