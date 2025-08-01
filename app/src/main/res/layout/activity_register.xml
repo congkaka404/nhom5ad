@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ECEF">
+    android:background="#3AAFA9">
 
 
     <androidx.cardview.widget.CardView
@@ -27,11 +27,11 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Register"
-                android:textColor="#333333"
+                android:textColor="#EDF5E1"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="16dp"
-                android:background="#FFF59D"
+                android:background="#379683"
                 android:padding="16dp"
                 android:backgroundTintMode="src_in" />
 
