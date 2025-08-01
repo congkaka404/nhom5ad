@@ -6,14 +6,14 @@ import java.util.Locale;
 import java.util.regex.Pattern;
 
 public class ValidationUtils {
-    // Không nên dùng 1 instance dùng chung nếu có thể bị dùng từ nhiều luồng
+    // Do not use a shared instance if it can be used from multiple threads.
     private static final ThreadLocal<SimpleDateFormat> dateFormatThreadLocal =
             ThreadLocal.withInitial(() -> new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()));
 
     private static final Pattern EMAIL_PATTERN =
             Pattern.compile("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$");
 
-    // Kiểm tra các trường có rỗng không
+    // Check if fields are empty
     public static boolean isEmpty(String... fields) {
         for (String field : fields) {
             if (field == null || field.trim().isEmpty()) {
@@ -23,7 +23,7 @@ public class ValidationUtils {
         return false;
     }
 
-    // Kiểm tra định dạng ngày dd/MM/yyyy
+    // Check date format dd/MM/yyyy
     public static boolean isValidDate(String dateStr) {
         try {
             SimpleDateFormat dateFormat = dateFormatThreadLocal.get();
@@ -35,7 +35,7 @@ public class ValidationUtils {
         }
     }
 
-    // Kiểm tra giá trị giá > minValue
+    // Check value price > minValue
     public static boolean isValidPrice(String priceStr, double minValue) {
         try {
             double priceValue = Double.parseDouble(priceStr);
@@ -45,12 +45,12 @@ public class ValidationUtils {
         }
     }
 
-    // Kiểm tra định dạng email cơ bản
+    //Check basic email formatting
     public static boolean isValidEmail(String email) {
         return email != null && EMAIL_PATTERN.matcher(email).matches();
     }
 
-    // Kiểm tra độ dài mật khẩu
+    // Check password length
     public static boolean isValidPassword(String password, int minLength) {
         return password != null && password.length() >= minLength;
     }
