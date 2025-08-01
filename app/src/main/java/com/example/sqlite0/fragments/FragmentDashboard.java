@@ -31,7 +31,7 @@ public class FragmentDashboard extends Fragment {
         preferenceUtils = new PreferenceUtils(getContext());
 
         loadData();
-        return view;
+        return view
     }
 
     @Override
