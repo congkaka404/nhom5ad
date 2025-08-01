@@ -238,7 +238,7 @@ public class FragmentStatistic extends Fragment {
                 e.printStackTrace();
             }
         }
-        tvTotalExpense.setText("total bill: " + String.format("%.0fK", total));
+        tvTotalExpense.setText("Total bill: " + String.format("%.0fK", total));
     }
 
     private void filterItemsByTitle(String query) {
