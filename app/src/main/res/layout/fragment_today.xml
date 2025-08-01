@@ -11,22 +11,22 @@
         android:id="@+id/tv_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="QUẢN LÝ CHI TIÊU"
+        android:text="EXPENSE MANAGEMENT"
         android:textSize="20sp"
         android:textStyle="bold"
         android:padding="16dp"
-        android:background="#FFC107" />
+        android:background="@color/grey" />
 
     <!-- Tổng chi "Tổng tiền: 12560K" -->
     <TextView
         android:id="@+id/tv_total_expense"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tổng tiền: 12560K"
+        android:text="Total: 12560K"
         android:textSize="18sp"
         android:padding="16dp"
         android:layout_marginTop="16dp"
-        android:background="#FFC107" />
+        android:background="@color/grey" />
 
     <!-- RecyclerView để hiển thị danh sách chi tiêu -->
     <androidx.recyclerview.widget.RecyclerView
