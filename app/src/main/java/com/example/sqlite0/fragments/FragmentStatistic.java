@@ -257,7 +257,7 @@ public class FragmentStatistic extends Fragment {
     }
 
     private void filterByCategory(String selectedCategory) {
-        if (!selectedCategory.equals("All")) {
+        if (!selectedCategory.equals("all")) {
             List<Item> tempList = new ArrayList<>(filteredList);
             filteredList.clear();
             for (Item item : tempList) {
