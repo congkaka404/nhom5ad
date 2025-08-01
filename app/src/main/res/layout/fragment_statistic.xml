@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="#F5F5F5"
+    android:background="#F0F4F8"
     android:padding="16dp">
 
     <!-- SearchView -->
@@ -18,7 +18,7 @@
         android:elevation="2dp"
         android:padding="8dp" />
 
-    <!-- Thời gian từ - đến -->
+    <!-- Bộ lọc thời gian -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -32,7 +32,8 @@
             android:layout_weight="1"
             app:cardCornerRadius="12dp"
             app:cardElevation="2dp"
-            android:layout_marginEnd="8dp">
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="#ffffff">
 
             <EditText
                 android:id="@+id/et_input_1"
@@ -51,7 +52,8 @@
             android:layout_weight="1"
             app:cardCornerRadius="12dp"
             app:cardElevation="2dp"
-            android:layout_marginStart="8dp">
+            android:layout_marginStart="8dp"
+            android:backgroundTint="#ffffff">
 
             <EditText
                 android:id="@+id/et_input_2"
@@ -65,7 +67,7 @@
         </androidx.cardview.widget.CardView>
     </LinearLayout>
 
-    <!-- Spinner + Search button -->
+    <!-- Spinner + Nút Tìm -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -78,7 +80,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             app:cardCornerRadius="12dp"
-            app:cardElevation="2dp">
+            app:cardElevation="2dp"
+            android:backgroundTint="#ffffff">
 
             <Spinner
                 android:id="@+id/spinner_categories_with_all"
@@ -95,11 +98,12 @@
             android:layout_height="wrap_content"
             android:text="Search"
             android:textAllCaps="false"
-            android:textColor="@android:color/white"
-            android:backgroundTint="#FFC107"
+            android:textColor="#ffffff"
+            android:backgroundTint="#379683"
             android:layout_marginStart="12dp"
             android:paddingHorizontal="16dp"
             android:paddingVertical="10dp"
+            android:elevation="2dp"
             android:background="@drawable/bg_button_rounded" />
     </LinearLayout>
 
@@ -108,24 +112,26 @@
         android:id="@+id/tv_total_expense"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Total spending: 0K"
+        android:text="Total spending: "
         android:textSize="18sp"
         android:textStyle="bold"
-        android:textColor="@android:color/white"
+        android:textColor="#212121"
         android:gravity="center"
-        android:background="#212121 "
+        android:background="#FFC107"
         android:padding="16dp"
         android:layout_marginBottom="12dp"
-        android:backgroundTint="#FFC107"
-        android:backgroundTintMode="src_in" />
+        android:elevation="2dp" />
 
-    <!-- RecyclerView danh sách -->
+    <!-- Danh sách chi tiêu -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_expenses"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@android:color/white"
+        android:background="#ffffff"
         android:clipToPadding="false"
-        android:padding="8dp" />
+        android:padding="8dp"
+        android:elevation="1dp"
+        android:scrollbars="vertical" />
+
 </LinearLayout>
