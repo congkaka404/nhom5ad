@@ -66,7 +66,7 @@ public class FragmentDashboard extends Fragment {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            tvTotalMonth.setText("Tổng chi tiêu tháng này: " + String.format("%.0fK", total));
+            tvTotalMonth.setText("Total spending this month: " + String.format("%.0fK", total));
         });
     }
 }
