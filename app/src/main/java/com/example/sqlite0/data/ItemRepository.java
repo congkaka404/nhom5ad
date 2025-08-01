@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ItemRepository {
-    private DatabaseHelper dbHelper;
+    private final DatabaseHelper dbHelper;
 
     public ItemRepository(Context context) {
         dbHelper = new DatabaseHelper(context);

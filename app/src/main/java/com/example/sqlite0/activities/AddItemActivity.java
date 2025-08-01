@@ -74,13 +74,11 @@ public class AddItemActivity extends AppCompatActivity {
             String priceStr = etPrice.getText().toString().trim();
             String date = etDate.getText().toString().trim();
 
-            // Kiểm tra các trường có rỗng không
             if (ValidationUtils.isEmpty(title, priceStr, date)) {
                 Toast.makeText(this, "Vui lòng điền đầy đủ thông tin", Toast.LENGTH_SHORT).show();
                 return;
             }
 
-            // Kiểm tra định dạng ngày
             if (!ValidationUtils.isValidDate(date)) {
                 Toast.makeText(this, "Ngày không hợp lệ, vui lòng chọn lại (dd/MM/yyyy)", Toast.LENGTH_SHORT).show();
                 return;
