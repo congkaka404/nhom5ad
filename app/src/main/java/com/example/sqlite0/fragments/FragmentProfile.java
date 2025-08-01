@@ -50,8 +50,8 @@ public class FragmentProfile extends Fragment {
             tvUsername.setText(user.getUsername());
             tvEmail.setText(user.getEmail());
         } else {
-            tvUsername.setText("Không tìm thấy thông tin");
-            tvEmail.setText("Không tìm thấy thông tin");
+            tvUsername.setText("No information found");
+            tvEmail.setText("No information found");
             Intent intent = new Intent(requireContext(), LoginActivity.class);
             startActivity(intent);
             requireActivity().finish();
