@@ -5,15 +5,21 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+
 import com.example.sqlite0.R;
 import com.example.sqlite0.models.Item;
 import com.example.sqlite0.utils.PreferenceUtils;
 import com.example.sqlite0.viewmodels.ItemViewModel;
+
+import java.text.NumberFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 
 public class FragmentDashboard extends Fragment {
@@ -21,6 +27,7 @@ public class FragmentDashboard extends Fragment {
     private TextView tvTotalMonth;
     private ItemViewModel itemViewModel;
     private PreferenceUtils preferenceUtils;
+    private final SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -44,29 +51,46 @@ public class FragmentDashboard extends Fragment {
         int userId = preferenceUtils.getUserId();
         if (userId == -1) return;
 
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
-        Calendar calendar = Calendar.getInstance();
-        calendar.set(Calendar.DAY_OF_MONTH, 1);
-        String startDate = dateFormat.format(calendar.getTime());
-        calendar.set(Calendar.DAY_OF_MONTH, calendar.getActualMaximum(Calendar.DAY_OF_MONTH));
-        String endDate = dateFormat.format(calendar.getTime());
+        Date start = getMonthStart();
+        Date end = getMonthEnd();
 
         itemViewModel.getItems(userId).observe(getViewLifecycleOwner(), items -> {
-            double total = 0;
+            double total = calculateTotalInRange(items, start, end);
+            tvTotalMonth.setText("Total of month: " + formatCurrency(total));
+        });
+    }
+
+    private double calculateTotalInRange(List<Item> items, Date start, Date end) {
+        double total = 0;
+
+        for (Item item : items) {
             try {
-                Date start = dateFormat.parse(startDate);
-                Date end = dateFormat.parse(endDate);
-                for (Item item : items) {
-                    Date itemDate = dateFormat.parse(item.getDate());
-                    if (itemDate.compareTo(start) >= 0 && itemDate.compareTo(end) <= 0) {
-                        String priceStr = item.getPrice().replace("K", "").trim();
-                        total += Double.parseDouble(priceStr);
-                    }
+                Date itemDate = dateFormat.parse(item.getDate());
+                if (itemDate != null && !itemDate.before(start) && !itemDate.after(end)) {
+                    String priceStr = item.getPrice().replaceAll("[^\\d.]", ""); // loại bỏ K, dấu phẩy, khoảng trắng
+                    total += Double.parseDouble(priceStr);
                 }
-            } catch (Exception e) {
+            } catch (ParseException e) {
                 e.printStackTrace();
             }
-            tvTotalMonth.setText("Tổng chi tiêu tháng này: " + String.format("%.0fK", total));
-        });
+        }
+
+        return total;
+    }
+
+    private Date getMonthStart() {
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(Calendar.DAY_OF_MONTH, 1);
+        return calendar.getTime();
+    }
+
+    private Date getMonthEnd() {
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(Calendar.DAY_OF_MONTH, calendar.getActualMaximum(Calendar.DAY_OF_MONTH));
+        return calendar.getTime();
+    }
+
+    private String formatCurrency(double amount) {
+        return String.format(Locale.getDefault(), "%.0fK", amount);
     }
 }
