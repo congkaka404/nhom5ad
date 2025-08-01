@@ -86,12 +86,12 @@
                 android:textColor="#ffffff" />
 
             <Button
-                android:id="@+id/btn_remove"
+                android:id="@+id/btn_delete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
                 android:backgroundTint="#FF6B6B"
-                android:text="Delete"
+                android:text="Remove"
                 android:textColor="#ffffff" />
 
             <Button
@@ -99,7 +99,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#379683"
-                android:text="Update"
+                android:text="Cancel"
                 android:textColor="#ffffff" />
         </LinearLayout>
 

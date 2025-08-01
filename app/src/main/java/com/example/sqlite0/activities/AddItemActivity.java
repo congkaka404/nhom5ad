@@ -29,8 +29,8 @@ public class AddItemActivity extends AppCompatActivity {
         EditText etTitle = findViewById(R.id.et_title);
         EditText etPrice = findViewById(R.id.et_price);
         EditText etDate = findViewById(R.id.et_date);
-        Button btnAdd = findViewById(R.id.btn_back);
-        Button btnCancel = findViewById(R.id.btn_update);
+        Button btnBack = findViewById(R.id.btn_back);
+        Button btnUpdatde = findViewById(R.id.btn_update);
 
         ItemRepository itemRepository = new ItemRepository(this);
         PreferenceUtils preferenceUtils = new PreferenceUtils(this);
@@ -62,7 +62,7 @@ public class AddItemActivity extends AppCompatActivity {
             datePickerDialog.show();
         });
 
-        btnAdd.setOnClickListener(v -> {
+        btnBack.setOnClickListener(v -> {
             int userId = preferenceUtils.getUserId();
             if (userId == -1) {
                 Toast.makeText(this, "Vui lòng đăng nhập", Toast.LENGTH_SHORT).show();
@@ -97,6 +97,6 @@ public class AddItemActivity extends AppCompatActivity {
             finish();
         });
 
-        btnCancel.setOnClickListener(v -> finish());
+        btnUpdatde.setOnClickListener(v -> finish());
     }
 }

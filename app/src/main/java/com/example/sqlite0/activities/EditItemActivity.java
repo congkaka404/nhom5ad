@@ -31,7 +31,7 @@ public class EditItemActivity extends AppCompatActivity {
         EditText etPrice = findViewById(R.id.et_price);
         EditText etDate = findViewById(R.id.et_date);
         Button btnUpdate = findViewById(R.id.btn_update);
-        Button btnRemove = findViewById(R.id.btn_remove);
+        Button btnDelete = findViewById(R.id.btn_delete);
         Button btnBack = findViewById(R.id.btn_back);
 
         ItemRepository itemRepository = new ItemRepository(this);
@@ -124,7 +124,7 @@ public class EditItemActivity extends AppCompatActivity {
             finish();
         });
 
-        btnRemove.setOnClickListener(v -> new AlertDialog.Builder(this)
+        btnDelete.setOnClickListener(v -> new AlertDialog.Builder(this)
                 .setTitle("Xác nhận xóa")
                 .setMessage("Bạn có chắc chắn muốn xóa mục chi tiêu này không?")
                 .setPositiveButton("Có", (dialog, which) -> {
