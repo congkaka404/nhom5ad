@@ -50,7 +50,7 @@ public class ValidationUtils {
         return email != null && EMAIL_PATTERN.matcher(email).matches();
     }
 
-    // Check password length
+    // check password lenght
     public static boolean isValidPassword(String password, int minLength) {
         return password != null && password.length() >= minLength;
     }
