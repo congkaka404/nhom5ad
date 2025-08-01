@@ -19,6 +19,7 @@ public class LoginActivity extends AppCompatActivity {
     private UserRepository userRepository;
     private PreferenceUtils preferenceUtils;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,5 +68,6 @@ public class LoginActivity extends AppCompatActivity {
             Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
             startActivity(intent);
         });
+
     }
 }
