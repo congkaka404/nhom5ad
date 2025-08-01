@@ -3240,10 +3240,10 @@ int id bounceEnd 0x7f090064
 int id bounceStart 0x7f090065
 int id btn_add_expense 0x7f090066
 int id btn_back 0x7f090067
+int id btn_delete 0x7f090224
 int id btn_login 0x7f090068
 int id btn_logout 0x7f090069
 int id btn_register 0x7f09006a
-int id btn_remove 0x7f09006b
 int id btn_search 0x7f09006c
 int id btn_update 0x7f09006d
 int id buttonPanel 0x7f09006e
