@@ -19,6 +19,7 @@ public class LoginActivity extends AppCompatActivity {
     private UserRepository userRepository;
     private PreferenceUtils preferenceUtils;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,7 +48,7 @@ public class LoginActivity extends AppCompatActivity {
             String password = etPassword.getText().toString().trim();
 
             if (username.isEmpty() || password.isEmpty()) {
-                Toast.makeText(LoginActivity.this, "Vui lòng nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this, "Please enter complete information", Toast.LENGTH_SHORT).show();
                 return;
             }
 
@@ -59,7 +60,7 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             } else {
-                Toast.makeText(LoginActivity.this, "Sai tên đăng nhập hoặc mật khẩu", Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this, "Failed username or password", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -67,5 +68,6 @@ public class LoginActivity extends AppCompatActivity {
             Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
             startActivity(intent);
         });
+
     }
 }

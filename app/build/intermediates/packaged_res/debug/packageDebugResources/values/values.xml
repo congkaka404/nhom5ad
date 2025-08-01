@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="categories">
+        <item>Mua sắm</item>
+        <item>Tiền ăn</item>
+        <item>Tiền nhà</item>
+        <item>Tiền điện</item>
+        <item>Tiền nước</item>
+        <item>Tiền khác</item>
+    </string-array>
+    <string-array name="categories_with_all">
+        <item>All</item>
+        <item>Mua sắm</item>
+        <item>Tiền ăn</item>
+        <item>Tiền nhà</item>
+        <item>Tiền điện</item>
+        <item>Tiền nước</item>
+        <item>Tiền khác</item>
+    </string-array>
+    <color name="black">#FF000000</color>
+    <color name="grey">#7E99A3</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="yellow">#FFC107</color>
+    <string name="app_name">SQLite0</string>
+    <style name="Base.Theme.SQLite0" parent="Theme.AppCompat.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="Theme.SQLite0" parent="Base.Theme.SQLite0"/>
+</resources>

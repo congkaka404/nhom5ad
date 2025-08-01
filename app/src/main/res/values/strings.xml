@@ -1,20 +1,20 @@
 <resources>
     <string name="app_name">SQLite0</string>
     <string-array name="categories">
-        <item>Mua sắm</item>
-        <item>Tiền ăn</item>
-        <item>Tiền nhà</item>
-        <item>Tiền điện</item>
-        <item>Tiền nước</item>
-        <item>Tiền khác</item>
+        <item>Shopping</item>
+        <item>Food</item>
+        <item>Rent</item>
+        <item>Electricity bill</item>
+        <item>Water bill</item>
+        <item>Other bill</item>
     </string-array>
     <string-array name="categories_with_all">
         <item>All</item>
-        <item>Mua sắm</item>
-        <item>Tiền ăn</item>
-        <item>Tiền nhà</item>
-        <item>Tiền điện</item>
-        <item>Tiền nước</item>
-        <item>Tiền khác</item>
+        <item>Shopping</item>
+        <item>Food</item>
+        <item>Rent</item>
+        <item>Electricity bill</item>
+        <item>Water bill</item>
+        <item>Other bill</item>
     </string-array>
 </resources>

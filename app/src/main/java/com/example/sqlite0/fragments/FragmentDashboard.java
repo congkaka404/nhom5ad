@@ -8,6 +8,7 @@ import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import com.example.sqlite0.R;
+import com.example.sqlite0.adapters.ItemAdapter;
 import com.example.sqlite0.models.Item;
 import com.example.sqlite0.utils.PreferenceUtils;
 import com.example.sqlite0.viewmodels.ItemViewModel;
@@ -21,6 +22,7 @@ public class FragmentDashboard extends Fragment {
     private TextView tvTotalMonth;
     private ItemViewModel itemViewModel;
     private PreferenceUtils preferenceUtils;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -66,7 +68,7 @@ public class FragmentDashboard extends Fragment {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            tvTotalMonth.setText("Tổng chi tiêu tháng này: " + String.format("%.0fK", total));
+            tvTotalMonth.setText("Total spending this month: " + String.format("%.0fK", total));
         });
     }
 }

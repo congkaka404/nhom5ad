@@ -63,12 +63,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_ITEMS);
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_USERS);
+        dropAllTables(db);
         onCreate(db);
     }
 
-    // Chuyển đổi định dạng ngày từ dd/MM/yyyy sang yyyy-MM-dd
+    private void dropAllTables(SQLiteDatabase db) {
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_ITEMS);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_USERS);
+    }
+
+    // Format chuyển đổi
     public String convertToDbDateFormat(String displayDate) {
         try {
             Date date = displayDateFormat.parse(displayDate);
@@ -79,7 +83,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
-    // Chuyển đổi định dạng ngày từ yyyy-MM-dd sang dd/MM/yyyy
     public String convertToDisplayDateFormat(String dbDate) {
         try {
             Date date = dbDateFormat.parse(dbDate);
@@ -90,12 +93,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
-    // --- Các phương thức cơ bản cho Users ---
+    // --- User CRUD ---
     public long insertUser(ContentValues values) {
         SQLiteDatabase db = this.getWritableDatabase();
-        long result = db.insert(TABLE_USERS, null, values);
-        db.close();
-        return result;
+        try {
+            return db.insert(TABLE_USERS, null, values);
+        } finally {
+            db.close();
+        }
     }
 
     public Cursor queryUser(String selection, String[] selectionArgs) {
@@ -103,26 +108,46 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return db.query(TABLE_USERS, null, selection, selectionArgs, null, null, null);
     }
 
-    // --- Các phương thức cơ bản cho Items ---
+    public Cursor getAllUsers() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        return db.rawQuery("SELECT * FROM " + TABLE_USERS, null);
+    }
+
+    public void deleteAllUsers() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        try {
+            db.execSQL("DELETE FROM " + TABLE_USERS);
+        } finally {
+            db.close();
+        }
+    }
+
+    // --- Item CRUD ---
     public long insertItem(ContentValues values) {
         SQLiteDatabase db = this.getWritableDatabase();
-        long result = db.insert(TABLE_ITEMS, null, values);
-        db.close();
-        return result;
+        try {
+            return db.insert(TABLE_ITEMS, null, values);
+        } finally {
+            db.close();
+        }
     }
 
     public int updateItem(ContentValues values, String whereClause, String[] whereArgs) {
         SQLiteDatabase db = this.getWritableDatabase();
-        int rowsAffected = db.update(TABLE_ITEMS, values, whereClause, whereArgs);
-        db.close();
-        return rowsAffected;
+        try {
+            return db.update(TABLE_ITEMS, values, whereClause, whereArgs);
+        } finally {
+            db.close();
+        }
     }
 
     public int deleteItem(String whereClause, String[] whereArgs) {
         SQLiteDatabase db = this.getWritableDatabase();
-        int rowsAffected = db.delete(TABLE_ITEMS, whereClause, whereArgs);
-        db.close();
-        return rowsAffected;
+        try {
+            return db.delete(TABLE_ITEMS, whereClause, whereArgs);
+        } finally {
+            db.close();
+        }
     }
 
     public Cursor queryItems(String selection, String[] selectionArgs) {
@@ -130,19 +155,29 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return db.query(TABLE_ITEMS, null, selection, selectionArgs, null, null, null);
     }
 
+    public Cursor getAllItems() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        return db.rawQuery("SELECT * FROM " + TABLE_ITEMS, null);
+    }
+
     public void clearItemsTable() {
         SQLiteDatabase db = this.getWritableDatabase();
-        db.execSQL("DELETE FROM " + TABLE_ITEMS);
-        db.close();
+        try {
+            db.execSQL("DELETE FROM " + TABLE_ITEMS);
+        } finally {
+            db.close();
+        }
     }
 
     public boolean isTableEmpty() {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery("SELECT COUNT(*) FROM " + TABLE_ITEMS, null);
-        cursor.moveToFirst();
-        int count = cursor.getInt(0);
-        cursor.close();
-        db.close();
-        return count == 0;
+        try {
+            cursor.moveToFirst();
+            return cursor.getInt(0) == 0;
+        } finally {
+            cursor.close();
+            db.close();
+        }
     }
 }
