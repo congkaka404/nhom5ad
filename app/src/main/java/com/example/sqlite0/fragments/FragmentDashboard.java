@@ -32,7 +32,7 @@ public class FragmentDashboard extends Fragment {
         itemViewModel = new ViewModelProvider(this).get(ItemViewModel.class);
         preferenceUtils = new PreferenceUtils(getContext());
 
-        loadData()
+        loadData();
         return view;
     }
 
