@@ -72,34 +72,34 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
             android:gravity="center"
-            android:layout_marginTop="16dp">
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/btn_back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Back"
+                android:layout_marginEnd="8dp"
                 android:backgroundTint="#A8D5BA"
-                android:textColor="#ffffff"
-                android:layout_marginEnd="8dp"/>
+                android:text="Back"
+                android:textColor="#ffffff" />
 
             <Button
                 android:id="@+id/btn_remove"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Delete"
+                android:layout_marginEnd="8dp"
                 android:backgroundTint="#FF6B6B"
-                android:textColor="#ffffff"
-                android:layout_marginEnd="8dp"/>
+                android:text="Delete"
+                android:textColor="#ffffff" />
 
             <Button
                 android:id="@+id/btn_update"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Update"
                 android:backgroundTint="#379683"
+                android:text="Update"
                 android:textColor="#ffffff" />
         </LinearLayout>
 

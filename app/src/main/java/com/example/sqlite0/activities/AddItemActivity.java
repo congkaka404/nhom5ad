@@ -29,8 +29,8 @@ public class AddItemActivity extends AppCompatActivity {
         EditText etTitle = findViewById(R.id.et_title);
         EditText etPrice = findViewById(R.id.et_price);
         EditText etDate = findViewById(R.id.et_date);
-        Button btnAdd = findViewById(R.id.btn_add);
-        Button btnCancel = findViewById(R.id.btn_cancel);
+        Button btnAdd = findViewById(R.id.btn_back);
+        Button btnCancel = findViewById(R.id.btn_update);
 
         ItemRepository itemRepository = new ItemRepository(this);
         PreferenceUtils preferenceUtils = new PreferenceUtils(this);
