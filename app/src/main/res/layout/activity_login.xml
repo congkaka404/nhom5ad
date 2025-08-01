@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#3AAFA9"
-    android:padding="16dp">
+    android:padding="24dp"
+    tools:context=".activities.LoginActivity">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        card_view:cardCornerRadius="20dp"
-        card_view:cardElevation="10dp"
-        card_view:cardBackgroundColor="#FFFFFF"> <!-- Nền trắng hiện đại -->
+        card_view:cardCornerRadius="24dp"
+        card_view:cardElevation="12dp"
+        card_view:cardBackgroundColor="#FFFFFF">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -20,67 +22,70 @@
             android:orientation="vertical"
             android:padding="24dp">
 
+            <!-- Tiêu đề -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Login"
-                android:textColor="#EDF5E1"
+                android:text="Welcome Back"
+                android:textColor="#379683"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                android:layout_marginBottom="16dp"
-                android:background="#379683"
-                android:padding="16dp"
-                android:backgroundTintMode="src_in" />
+                android:gravity="center"
+                android:layout_marginBottom="16dp" />
 
+            <!-- Username -->
             <EditText
                 android:id="@+id/et_username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/edittext_highlight"
                 android:hint="Username"
-                android:padding="12dp"
+                android:background="@drawable/edittext_highlight"
+                android:padding="14dp"
                 android:textColor="#000000"
-                android:textColorHint="#888888" />
+                android:textColorHint="#999999"
+                android:layout_marginBottom="16dp" />
 
+            <!-- Password -->
             <EditText
                 android:id="@+id/et_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/edittext_highlight"
                 android:hint="Password"
                 android:inputType="textPassword"
-                android:padding="12dp"
+                android:background="@drawable/edittext_highlight"
+                android:padding="14dp"
                 android:textColor="#000000"
-                android:textColorHint="#888888" />
+                android:textColorHint="#999999"
+                android:layout_marginBottom="24dp" />
 
+            <!-- Nút hành động -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:gravity="center">
 
                 <Button
                     android:id="@+id/btn_login"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:backgroundTint="@color/yellow"
-                    android:padding="12dp"
+                    android:layout_weight="1"
                     android:text="Sign In"
-                    android:textColor="#000000" />
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#379683"
+                    android:layout_marginEnd="8dp"
+                    android:padding="12dp" />
 
                 <Button
                     android:id="@+id/btn_register"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/yellow"
-                    android:padding="12dp"
-                    android:text="Sign up"
-                    android:textColor="#000000" />
+                    android:layout_weight="1"
+                    android:text="Sign Up"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#8EE4AF"
+                    android:layout_marginStart="8dp"
+                    android:padding="12dp" />
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
