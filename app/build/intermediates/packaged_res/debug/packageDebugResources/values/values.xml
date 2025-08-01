@@ -1,26 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="categories">
-        <item>Mua sắm</item>
-        <item>Tiền ăn</item>
-        <item>Tiền nhà</item>
-        <item>Tiền điện</item>
-        <item>Tiền nước</item>
-        <item>Tiền khác</item>
+        <item>Shopping</item>
+        <item>Food</item>
+        <item>Rent</item>
+        <item>Electricity bill</item>
+        <item>Water bill</item>
+        <item>Other bill</item>
     </string-array>
     <string-array name="categories_with_all">
         <item>All</item>
-        <item>Mua sắm</item>
-        <item>Tiền ăn</item>
-        <item>Tiền nhà</item>
-        <item>Tiền điện</item>
-        <item>Tiền nước</item>
-        <item>Tiền khác</item>
+        <item>Shopping</item>
+        <item>Food</item>
+        <item>Rent</item>
+        <item>Electricity bill</item>
+        <item>Water bill</item>
+        <item>Other bill</item>
     </string-array>
+    <color name="Light_blue">#2E9CCA</color>
+    <color name="background">#F5F5F5</color>
+    <color name="bee">#EDF5E1</color>
     <color name="black">#FF000000</color>
+    <color name="dark_blue">#05386B</color>
+    <color name="dark_green">#379683</color>
+    <color name="dark_grey">#616161</color>
+    <color name="green">#3AAFA9</color>
     <color name="grey">#7E99A3</color>
+    <color name="light_green">#8EE4AF</color>
+    <color name="light_grey">#9E9E9E</color>
+    <color name="primary">#4D63D5</color>
     <color name="white">#FFFFFFFF</color>
     <color name="yellow">#FFC107</color>
+    <color name="yellowlight">#ECEFF1</color>
     <string name="app_name">SQLite0</string>
     <style name="Base.Theme.SQLite0" parent="Theme.AppCompat.DayNight.NoActionBar">
         

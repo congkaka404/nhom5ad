@@ -1342,6 +1342,7 @@ attr yearTodayStyle
 bool abc_action_bar_embed_tabs
 bool abc_config_actionMenuItemAllCaps
 bool mtrl_btn_textappearance_all_caps
+color Light_blue
 color abc_background_cache_hint_selector_material_dark
 color abc_background_cache_hint_selector_material_light
 color abc_btn_colored_borderless_text_material
@@ -1371,10 +1372,12 @@ color accent_material_dark
 color accent_material_light
 color androidx_core_ripple_material_light
 color androidx_core_secondary_text_default_material_light
+color background
 color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
 color background_material_light
+color bee
 color black
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
@@ -1390,6 +1393,9 @@ color cardview_dark_background
 color cardview_light_background
 color cardview_shadow_end_color
 color cardview_shadow_start_color
+color dark_blue
+color dark_green
+color dark_grey
 color design_bottom_navigation_shadow_color
 color design_box_stroke_color
 color design_dark_default_color_background
@@ -1436,9 +1442,12 @@ color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
+color green
 color grey
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color light_green
+color light_grey
 color m3_appbar_overlay_color
 color m3_assist_chip_icon_tint_color
 color m3_assist_chip_stroke_color
@@ -2096,6 +2105,7 @@ color mtrl_textinput_hovered_box_stroke_color
 color nav_item_color
 color notification_action_color_filter
 color notification_icon_bg_color
+color primary
 color primary_dark_material_dark
 color primary_dark_material_light
 color primary_material_dark
@@ -2120,6 +2130,7 @@ color tooltip_background_dark
 color tooltip_background_light
 color white
 color yellow
+color yellowlight
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
 dimen abc_action_bar_default_height_material
@@ -3004,10 +3015,14 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable bg_button_rounded
+drawable bg_edittext
+drawable bg_spinner
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
 drawable btn_checkbox_unchecked_to_checked_mtrl_animation
+drawable btn_logout_bg
 drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
@@ -3018,6 +3033,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable edittext_highlight
 drawable ic_add
 drawable ic_arrow_back_black_24
 drawable ic_call_answer
@@ -3044,6 +3060,7 @@ drawable ic_remove
 drawable ic_search_black_24
 drawable ic_statistic
 drawable ic_today
+drawable ic_user_profile
 drawable indeterminate_static
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
@@ -3222,9 +3239,8 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
-id btn_add
+id btn_add_expense
 id btn_back
-id btn_cancel
 id btn_login
 id btn_logout
 id btn_register
@@ -3235,6 +3251,7 @@ id buttonPanel
 id cache_measures
 id callMeasure
 id cancel_button
+id card_user
 id carryVelocity
 id center
 id centerCrop
@@ -3364,6 +3381,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id img_profile_icon
 id immediateStop
 id included
 id indeterminate
@@ -3559,6 +3577,7 @@ id spacer
 id special_effects_controller_view_tag
 id spinner_categories_with_all
 id spinner_category
+id spinner_filter
 id spline
 id split_action_bar
 id spread
@@ -3637,6 +3656,7 @@ id tv_price
 id tv_title
 id tv_total_expense
 id tv_total_month
+id tv_total_spending
 id tv_username
 id tv_username_label
 id unchecked
@@ -3808,8 +3828,8 @@ layout fragment_statistic
 layout fragment_today
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
-layout item_expense
 layout item_spinner
+layout items_exepense
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title

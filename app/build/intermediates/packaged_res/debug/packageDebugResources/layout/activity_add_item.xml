@@ -1,91 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#F5F5F5"
+    android:background="@color/bee"
     android:padding="16dp">
 
-    <!-- Tiêu đề -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Thêm chi tiêu"
-        android:gravity="center"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:background="#FFC107"
-        android:padding="16dp"
-        android:textColor="@android:color/black" />
-
-    <!-- EditText để nhập tiêu đề -->
-    <EditText
-        android:id="@+id/et_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="enter title"
-        android:padding="12dp"
-        android:background="@android:color/white"
-        android:layout_marginTop="16dp" />
-
-    <!-- Spinner để chọn danh mục -->
-    <Spinner
-        android:id="@+id/spinner_category"
-        android:entries="@array/categories"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:padding="12dp" />
-
-    <!-- EditText để nhập giá -->
-    <EditText
-        android:id="@+id/et_price"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="enter price"
-        android:padding="12dp"
-        android:inputType="numberDecimal"
-        android:background="@android:color/white"
-        android:layout_marginTop="16dp" />
-
-    <!-- EditText để chọn ngày -->
-    <EditText
-        android:id="@+id/et_date"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="select date"
-        android:padding="12dp"
-        android:background="@android:color/white"
-        android:layout_marginTop="16dp"
-        android:focusable="false"
-        android:focusableInTouchMode="false" />
-
-    <!-- Các nút -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="16dp"
-        android:gravity="center">
+        android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btn_add"
-            android:layout_width="wrap_content"
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ADD"
-            android:backgroundTint="#FFC107"
-            android:textColor="@android:color/black"
+            android:text="Add New Expense"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:padding="20dp"
+            android:background="@color/dark_green"
+            android:elevation="4dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Title Input -->
+        <EditText
+            android:id="@+id/et_title"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_edittext"
+            android:hint="Expense title"
             android:padding="12dp"
-            android:layout_marginEnd="8dp" />
+            android:textColor="@color/black" />
 
-        <Button
-            android:id="@+id/btn_cancel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="CANCEL"
-            android:backgroundTint="#FFC107"
-            android:textColor="@android:color/black"
+        <!-- Category Spinner -->
+        <Spinner
+            android:id="@+id/spinner_category"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_spinner"
             android:padding="12dp" />
-    </LinearLayout>
 
-</LinearLayout>
+        <!-- Amount Input -->
+        <EditText
+            android:id="@+id/et_price"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_edittext"
+            android:hint="Amount"
+            android:inputType="numberDecimal"
+            android:padding="12dp"
+            android:textColor="@color/black" />
+
+        <!-- Date Input -->
+        <EditText
+            android:id="@+id/et_date"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/bg_edittext"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:hint="Select date"
+            android:padding="12dp" />
+
+        <!-- Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="#A8D5BA"
+                android:text="Back"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:id="@+id/btn_remove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="#FF6B6B"
+                android:text="Delete"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:id="@+id/btn_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#379683"
+                android:text="Update"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>
