@@ -5,4 +5,7 @@
     <color name="yellow">#FFC107</color>
     <color name="grey">#7E99A3</color>
     <color name="yellowlight">#ECEFF1</color>
+    <color name="primary">#3F51B5</color>
+    <color name="background">#F5F5F5</color>
+    <color name="dark_grey">#616161</color>
 </resources>
