@@ -7,6 +7,7 @@
     android:background="@color/background"
     android:padding="16dp">
 
+
     <!-- SearchView -->
     <androidx.appcompat.widget.SearchView
         android:id="@+id/search_view"
@@ -136,4 +137,5 @@
         android:clipToPadding="false"
         android:padding="8dp"
         android:elevation="2dp" />
+
 </LinearLayout>
