@@ -65,7 +65,7 @@ public class AddItemActivity extends AppCompatActivity {
         btnAdd.setOnClickListener(v -> {
             int userId = preferenceUtils.getUserId();
             if (userId == -1) {
-                Toast.makeText(this, "Please login", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Vui lòng đăng nhập", Toast.LENGTH_SHORT).show();
                 return;
             }
 
@@ -75,25 +75,25 @@ public class AddItemActivity extends AppCompatActivity {
             String date = etDate.getText().toString().trim();
 
             if (ValidationUtils.isEmpty(title, priceStr, date)) {
-                Toast.makeText(this, "Please fill in all information", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Vui lòng điền đầy đủ thông tin", Toast.LENGTH_SHORT).show();
                 return;
             }
 
             if (!ValidationUtils.isValidDate(date)) {
-                Toast.makeText(this, "Invalid date, please select again (dd/MM/yyyy)", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Ngày không hợp lệ, vui lòng chọn lại (dd/MM/yyyy)", Toast.LENGTH_SHORT).show();
                 return;
             }
 
             // Kiểm tra giá trị giá
             if (!ValidationUtils.isValidPrice(priceStr, 0)) {
-                Toast.makeText(this, "Price must be greater than 0 and a valid number", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Giá phải lớn hơn 0 và là số hợp lệ", Toast.LENGTH_SHORT).show();
                 return;
             }
 
             String price = priceStr + "K";
             Item item = new Item(userId, title, category, price, date);
             itemRepository.addItem(item, userId);
-            Toast.makeText(this, "Added spending item", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Đã thêm mục chi tiêu", Toast.LENGTH_SHORT).show();
             finish();
         });
 

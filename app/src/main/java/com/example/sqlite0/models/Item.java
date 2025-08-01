@@ -26,8 +26,6 @@ public class Item {
         this.price = price;
         this.date = date;
     }
-    // Getters
-
 
     // Constructor không có id và userId (giữ lại cho tương thích cũ, nếu cần)
     public Item(String title, String category, String price, String date) {
@@ -36,6 +34,7 @@ public class Item {
         this.price = price;
         this.date = date;
     }
+
     // Getters
     public int getId() {
         return id;
@@ -56,9 +55,11 @@ public class Item {
     public String getPrice() {
         return price;
     }
+
     public String getDate() {
         return date;
     }
+
     // Setters
     public void setId(int id) {
         this.id = id;
@@ -67,9 +68,11 @@ public class Item {
     public void setUserId(int userId) {
         this.userId = userId;
     }
+
     public void setTitle(String title) {
         this.title = title;
     }
+
     public void setCategory(String category) {
         this.category = category;
     }
