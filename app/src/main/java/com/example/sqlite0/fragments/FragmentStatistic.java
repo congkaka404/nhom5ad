@@ -122,11 +122,11 @@ public class FragmentStatistic extends Fragment {
             String endDate = etInput2.getText().toString().trim();
 
             if (!startDate.isEmpty() && !ValidationUtils.isValidDate(startDate)) {
-                Toast.makeText(getContext(), "Ngày bắt đầu không hợp lệ (dd/MM/yyyy)", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Invalid start date (dd/MM/yyyy)", Toast.LENGTH_SHORT).show();
                 return;
             }
             if (!endDate.isEmpty() && !ValidationUtils.isValidDate(endDate)) {
-                Toast.makeText(getContext(), "Ngày kết thúc không hợp lệ (dd/MM/yyyy)", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Invalid start date (dd/MM/yyyy)", Toast.LENGTH_SHORT).show();
                 return;
             }
 
@@ -238,7 +238,7 @@ public class FragmentStatistic extends Fragment {
                 e.printStackTrace();
             }
         }
-        tvTotalExpense.setText("Tổng tiền: " + String.format("%.0fK", total));
+        tvTotalExpense.setText("Total bill: " + String.format("%.0fK", total));
     }
 
     private void filterItemsByTitle(String query) {
@@ -257,7 +257,7 @@ public class FragmentStatistic extends Fragment {
     }
 
     private void filterByCategory(String selectedCategory) {
-        if (!selectedCategory.equals("All")) {
+        if (!selectedCategory.equals("all")) {
             List<Item> tempList = new ArrayList<>(filteredList);
             filteredList.clear();
             for (Item item : tempList) {
