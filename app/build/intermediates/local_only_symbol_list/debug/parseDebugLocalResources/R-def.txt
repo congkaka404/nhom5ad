@@ -37,10 +37,13 @@ id bottom_navigation
 id btn_add_expense
 id btn_back
 id btn_delete
+id btn_goto_gpt
 id btn_login
 id btn_logout
 id btn_register
+id btn_remove
 id btn_search
+id btn_send
 id btn_update
 id card_user
 id et_date
@@ -49,6 +52,7 @@ id et_input_1
 id et_input_2
 id et_password
 id et_price
+id et_prompt
 id et_title
 id et_username
 id fab_add
@@ -59,6 +63,7 @@ id nav_profile
 id nav_statistic
 id nav_today
 id rv_expenses
+id scrollView
 id search_view
 id spinner_categories_with_all
 id spinner_category
@@ -68,6 +73,7 @@ id tv_date
 id tv_email
 id tv_email_label
 id tv_price
+id tv_response
 id tv_title
 id tv_total_expense
 id tv_total_month
@@ -82,6 +88,7 @@ layout activity_main
 layout activity_register
 layout activity_splash
 layout fragment_dashboard
+layout fragment_gpt
 layout fragment_history
 layout fragment_profile
 layout fragment_statistic

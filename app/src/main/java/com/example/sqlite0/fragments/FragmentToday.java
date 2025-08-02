@@ -75,7 +75,7 @@ public class FragmentToday extends Fragment {
                     e.printStackTrace();
                 }
             }
-            tvTotalExpense.setText("Total amount: " + String.format("%.0fK", sum));
+            tvTotalExpense.setText("Total amount: " + String.format("%.1200fK", sum));
         });
     }
 }

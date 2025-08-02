@@ -3242,10 +3242,13 @@ id bounceStart
 id btn_add_expense
 id btn_back
 id btn_delete
+id btn_goto_gpt
 id btn_login
 id btn_logout
 id btn_register
+id btn_remove
 id btn_search
+id btn_send
 id btn_update
 id buttonPanel
 id cache_measures
@@ -3336,6 +3339,7 @@ id et_input_1
 id et_input_2
 id et_password
 id et_price
+id et_prompt
 id et_title
 id et_username
 id exitUntilCollapsed
@@ -3653,6 +3657,7 @@ id tv_date
 id tv_email
 id tv_email_label
 id tv_price
+id tv_response
 id tv_title
 id tv_total_expense
 id tv_total_month
@@ -3822,6 +3827,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_dashboard
+layout fragment_gpt
 layout fragment_history
 layout fragment_profile
 layout fragment_statistic

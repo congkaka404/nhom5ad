@@ -30,8 +30,10 @@ public class EditItemActivity extends AppCompatActivity {
         EditText etTitle = findViewById(R.id.et_title);
         EditText etPrice = findViewById(R.id.et_price);
         EditText etDate = findViewById(R.id.et_date);
+
+
         Button btnUpdate = findViewById(R.id.btn_update);
-        Button btnDelete = findViewById(R.id.btn_delete);
+        Button btnRemove = findViewById(R.id.btn_remove);
         Button btnBack = findViewById(R.id.btn_back);
 
         ItemRepository itemRepository = new ItemRepository(this);
@@ -93,7 +95,7 @@ public class EditItemActivity extends AppCompatActivity {
         btnUpdate.setOnClickListener(v -> {
             int userId = preferenceUtils.getUserId();
             if (userId == -1) {
-                Toast.makeText(this, "Please login", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Vui lòng đăng nhập", Toast.LENGTH_SHORT).show();
                 return;
             }
 
@@ -103,36 +105,36 @@ public class EditItemActivity extends AppCompatActivity {
             String newDate = etDate.getText().toString().trim();
 
             if (ValidationUtils.isEmpty(newTitle, newPriceStr, newDate)) {
-                Toast.makeText(this, "Please fill in all information", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Vui lòng điền đầy đủ thông tin", Toast.LENGTH_SHORT).show();
                 return;
             }
 
             if (!ValidationUtils.isValidDate(newDate)) {
-                Toast.makeText(this, "Invalid date, please select again (dd/MM/yyyy)", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Ngày không hợp lệ, vui lòng chọn lại (dd/MM/yyyy)", Toast.LENGTH_SHORT).show();
                 return;
             }
 
             if (!ValidationUtils.isValidPrice(newPriceStr, 0)) {
-                Toast.makeText(this, "Price must be greater than 0 and a valid number", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Giá phải lớn hơn 0 và là số hợp lệ", Toast.LENGTH_SHORT).show();
                 return;
             }
 
             String newPrice = newPriceStr + "K";
             Item updatedItem = new Item(itemId, userId, newTitle, newCategory, newPrice, newDate);
             itemRepository.updateItem(updatedItem);
-            Toast.makeText(this, "Updated spending item", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Đã cập nhật mục chi tiêu", Toast.LENGTH_SHORT).show();
             finish();
         });
 
-        btnDelete.setOnClickListener(v -> new AlertDialog.Builder(this)
-                .setTitle("Confirm deletion")
-                .setMessage("Are you sure you want to delete this expense item?")
-                .setPositiveButton("Yes", (dialog, which) -> {
+        btnRemove.setOnClickListener(v -> new AlertDialog.Builder(this)
+                .setTitle("Xác nhận xóa")
+                .setMessage("Bạn có chắc chắn muốn xóa mục chi tiêu này không?")
+                .setPositiveButton("Có", (dialog, which) -> {
                     itemRepository.deleteItem(itemId);
-                    Toast.makeText(this, "Expense item deleted", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Đã xóa mục chi tiêu", Toast.LENGTH_SHORT).show();
                     finish();
                 })
-                .setNegativeButton("no", (dialog, which) -> dialog.dismiss())
+                .setNegativeButton("Không", (dialog, which) -> dialog.dismiss())
                 .show());
 
         btnBack.setOnClickListener(v -> finish());
