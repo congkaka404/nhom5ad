@@ -65,7 +65,7 @@ public class FragmentHistory extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        // Load mặc định "All"
+        // Load  "All"
         filterItemsByCategory("All");
     }
 
