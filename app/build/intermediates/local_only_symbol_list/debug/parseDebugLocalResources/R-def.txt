@@ -40,6 +40,7 @@ id btn_delete
 id btn_login
 id btn_logout
 id btn_register
+id btn_remove
 id btn_search
 id btn_update
 id card_user
