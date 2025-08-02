@@ -3241,11 +3241,13 @@ int id bounceStart 0x7f090065
 int id btn_add_expense 0x7f090066
 int id btn_back 0x7f090067
 int id btn_delete 0x7f090068
+int id btn_goto_gpt 0x7f090228
 int id btn_login 0x7f090069
 int id btn_logout 0x7f09006a
 int id btn_register 0x7f09006b
 int id btn_remove 0x7f09006c
 int id btn_search 0x7f09006d
+int id btn_send 0x7f090225
 int id btn_update 0x7f09006e
 int id buttonPanel 0x7f09006f
 int id cache_measures 0x7f090070
@@ -3336,6 +3338,7 @@ int id et_input_1 0x7f0900c4
 int id et_input_2 0x7f0900c5
 int id et_password 0x7f0900c6
 int id et_price 0x7f0900c7
+int id et_prompt 0x7f090226
 int id et_title 0x7f0900c8
 int id et_username 0x7f0900c9
 int id exitUntilCollapsed 0x7f0900ca
@@ -3653,6 +3656,7 @@ int id tv_date 0x7f090201
 int id tv_email 0x7f090202
 int id tv_email_label 0x7f090203
 int id tv_price 0x7f090204
+int id tv_response 0x7f090227
 int id tv_title 0x7f090205
 int id tv_total_expense 0x7f090206
 int id tv_total_month 0x7f090207
@@ -3822,6 +3826,7 @@ int layout design_navigation_menu_item 0x7f0c002f
 int layout design_text_input_end_icon 0x7f0c0030
 int layout design_text_input_start_icon 0x7f0c0031
 int layout fragment_dashboard 0x7f0c0032
+int layout fragment_gpt 0x7f0c0078
 int layout fragment_history 0x7f0c0033
 int layout fragment_profile 0x7f0c0034
 int layout fragment_statistic 0x7f0c0035

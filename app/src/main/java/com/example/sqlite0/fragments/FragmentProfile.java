@@ -65,5 +65,6 @@ public class FragmentProfile extends Fragment {
         });
 
         return view;
+
     }
 }
